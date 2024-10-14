@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload GeoTIFF</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            margin: 20px 0;
+            font-size: 2.5em;  /* Increase text size */
+        }
+        input[type="file"] {
+            margin: 10px 0;
+        }
+        input[type="submit"] {
+            background-color: lightgray; /* Light gray button */
+            color: black;                /* Black text */
+            border: none;
+            border-radius: 12px;        /* Rounded edges */
+            padding: 10px 20px;
+            font-size: 1.2em;           /* Bigger text */
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: gray; /* Darker gray on hover */
+        }
+    </style>
+</head>
+<body>
+    <h2>Upload GeoTIFF File</h2>
+    <form action="/uploadGeoTiff" method="POST" enctype="multipart/form-data">
+        <label for="file">Select a GeoTIFF file:</label>
+        <input type="file" name="file" accept=".tif,.tiff" required>
+        <br><br>
+        <input type="submit" value="Upload">
+    </form>
+</body>
+</html>
+

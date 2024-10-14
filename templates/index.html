@@ -3,9 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Radio Telemetry Tracker</title>
+    <title>Map Upload</title>
+    <style>
+        body {
+            text-align: center;
+            margin: 50px;
+        }
+        h2 {
+            font-weight: normal; /* Set heading weight to normal */
+        }
+        button {
+            margin: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none; /* Remove default border */
+            border-radius: 15px; /* Make the button rounded */
+            background-color: lightgray; /* Light gray background color */
+            color: black; /* Text color */
+            transition: background-color 0.3s; /* Smooth transition for hover effect */
+            width: 200px; /* Set a fixed width for consistent button size */
+        }
+        button:hover {
+            background-color: gray; /* Darker shade on hover */
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to the Radio Telemetry Tracker!</h1>
+    <h1>Welcome to the Geographic Information System!</h1>
+    <h2>Select Map Type</h2>
+    <button onclick="window.location.href='/uploadGeoTiff'">Upload GeoTIFF</button>
+    <button onclick="window.location.href='/uploadWebmap'">Load Webmap Tiles</button>
+    <button onclick="window.location.href='/uploadShapefile'">Upload Shapefile</button>
+    <button onclick="window.location.href='/uploadGeoJSON'">Upload GeoJSON</button>
 </body>
 </html>
