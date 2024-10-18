@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Display</title>
+    <style>
+        body {
+            text-align: center;
+            margin: 20px;
+            position: relative; /* Make body relative for absolute positioning */
+        }
+        #map {
+            height: 500px; /* Adjust height as needed */
+            margin: 20px auto;
+        }
+        .upload-button {
+            position: absolute; /* Positioning the button */
+            top: 10px; /* Distance from the top */
+            right: 20px; /* Distance from the right */
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 15px;
+            background-color: lightgray;
+            color: black;
+            transition: background-color 0.3s;
+            z-index: 1000; /* Make sure it’s above the map */
+        }
+        .upload-button:hover {
+            background-color: gray;
+        }
+    </style>
+    <!-- Include Folium's CSS and JS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+    <h1>Map Display</h1>
+    <div id="map">{{ map|safe }}</div>
+    <button class="upload-button" onclick="window.location.href='/uploadOverlays'">Upload Overlays</button>
+</body>
+</html>
